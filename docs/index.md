@@ -4,3 +4,9 @@
 
 [github博客搭建教程](./docs/Github博客搭建.md)
 
+今后可能会更新的：
+
+1. 记录类：linux与windows网络配置相关命令
+2. GFW研究
+3. 免杀技术
+4. 树莓派kali配置与使用
