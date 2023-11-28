@@ -4,6 +4,8 @@
 
 [github博客搭建教程](./docs/Github博客搭建.md)
 
+[路由表配置](./docs/路由表配置.md)
+
 今后可能会更新的：
 
 1. 记录类：linux与windows网络配置相关命令
