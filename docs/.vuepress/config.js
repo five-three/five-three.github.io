@@ -12,9 +12,9 @@ module.exports = {
           background-image: url('/bg.png');
           background-repeat: no-repeat;
           background-attachment: fixed;
-          background-size: 100% 100%;
-          margin: 0; /* 重置页面边距 */
-          height: 100vh; /* 使body占据整个视口高度 */
+          background-size: cover;
+          margin: 0;
+          height: 100vh;
           display: flex;
           align-items: center;
           justify-content: center;
