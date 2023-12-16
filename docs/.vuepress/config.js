@@ -9,7 +9,7 @@ module.exports = {
         // ...
         ['style', {}, `
           body {
-            background-image: url('/bg.jpg');
+            background-image: url('/bg.png');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
