@@ -9,15 +9,27 @@ module.exports = {
         // ...
         ['style', {}, `
         body {
+          margin: 0;
+          overflow: hidden; /* 禁止body的滚动条 */
+        }
+      
+        .background-container {
           background-image: url('/bg.png');
           background-repeat: no-repeat;
           background-attachment: fixed;
           background-size: cover;
-          margin: 0;
           height: 100vh;
+          overflow-y: auto; /* 允许滚动 */
+          margin: 0;
           display: flex;
-          align-items: center;
-          justify-content: center;
+          flex-direction: column;
+        }
+      
+        /* 添加其他页面内容样式，确保内容不被背景遮挡 */
+        .content {
+          flex: 1;
+          padding: 20px;
+          /* 其他内容样式 */
         }
       `]
     ],
