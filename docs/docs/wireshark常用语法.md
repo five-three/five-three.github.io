@@ -1,5 +1,7 @@
 # wireshark常用语法
 
+<div style="background-image: url('/bg.png'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; height: 100vh; overflow-y: auto;">
+
 ## 捕获过滤器
 
 方向：
@@ -67,3 +69,5 @@ tcp ip icmp arp http dns dhcp
 使用例
 
 ![image-20231216141933271](./assets/image-20231216141933271.png)
+
+</div>
