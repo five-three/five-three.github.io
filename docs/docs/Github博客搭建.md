@@ -141,3 +141,7 @@ action成功执行完成后，去github的github pages调整设置如下：
 > Tips：网站主页默认为docs\index.md，如果没有创建该文件可能会显示404 not found
 
 这样我们的网站雏形就搭建好了！
+
+网站美化：
+
+> [vuepress 网页背景-掘金 (juejin.cn)](https://juejin.cn/s/vuepress 网页背景)
