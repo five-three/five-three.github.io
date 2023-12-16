@@ -8,12 +8,17 @@ module.exports = {
     head: [
         // ...
         ['style', {}, `
-          body {
-            background-image: url('/bg.png');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-          }
-        `]
+        body {
+          background-image: url('/bg.png');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+          margin: 0; /* 重置页面边距 */
+          height: 100vh; /* 使body占据整个视口高度 */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      `]
     ],
 }
