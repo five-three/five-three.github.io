@@ -22,8 +22,10 @@
 > [proxychains for windows 用法 - 下站见 (xiazhanjian.com)](https://www.xiazhanjian.com/archives/proxychainsforwindows.html)
 >
 > [EarthWorm(ew)使用教程 - FreeBuf网络安全行业门户](https://www.freebuf.com/sectool/259634.html)
+>
+> [内网渗透：使用ew实现socks代理 - FreeBuf网络安全行业门户](https://www.freebuf.com/sectool/234254.html)
 
-一次具体实施:
+一次具体实施（似乎不太对）:
 
 1.在win10攻击机上运行：
 
